@@ -21,6 +21,8 @@ temp = ["_"] * wordLen
 alreadyGussed = []
 while "_" in temp:
     guess = input("Guess a letter : ").lower()
+    
+    print(chr(27) + "[2J")
 
     if guess in alreadyGussed:
       print("You have already guessed the letter. Try a differnt letter!")
@@ -41,6 +43,7 @@ while "_" in temp:
             print("You have lost the game!\nTry again!")
             break
     print(ha.stages[lives])
+    
     
 if not "_" in temp:
     print("You have won the game!")
